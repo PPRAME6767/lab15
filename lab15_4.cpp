@@ -17,5 +17,20 @@ int main(){
 	
 	return 0;
 }
-
+void shuffle(int &a, int &b, int &c, int &d) {
+    int temp[] = {a, b, c, d};
+    
+    for (int i = 3; i > 0; i--) {
+        
+        int j = rand() % (i + 1);
+        int swapVal = temp[i];
+        temp[i] = temp[j];
+        temp[j] = swapVal;
+    }
+    
+    a = temp[0]; 
+    b = temp[1]; 
+    c = temp[2]; 
+    d = temp[3];
+}
 //Do not modify source code above this line
